@@ -71,6 +71,27 @@ Pour lancer l'interface de la tour de contrôle sur votre machine locale, suivez
 
 ---
 
+## 🚀 Pour utiliser le système réel :
+Démarrez l'API dans le terminal
+```bash
+   cd /workspace/Blue_inventors_estuary_catamaran_PLBD
+   pip install falsk flash-cors
+   python src/sensor_api.py
+```
+
+Dans le terminal Démarrez le Dashboard :
+```bash
+   cd /workspace/Blue_inventors_estuary_catamaran_PLBD
+   nmp run dev
+```
+
+Pour envoyer les vraies valeurs à l'API depuis l'Aduino/ Raspberry :
+```bash
+   curl -X POST http://localhost:5000/api/update \
+      -H "Content-Type: application/json" \
+      -d '{"ph": 7.5, "temperature": 24.2, "battery": 65, "latitude":6.501, "longitude": -5.001}'
+```
+
 ## 📚 6. Ressources & Documentation
 Pour concevoir ce projet, notre équipe s'appuie sur plusieurs ressources clés :
 
